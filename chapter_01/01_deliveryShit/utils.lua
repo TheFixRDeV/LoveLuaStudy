@@ -1,7 +1,3 @@
-function soma(a,b)
-  return a+b
-end
-
 function drawCircle(mode,x,y,radius,r,g,b,a)
   love.graphics.setColor(r,g,b,a)
   love.graphics.circle(mode,x,y,radius)

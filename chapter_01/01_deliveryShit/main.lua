@@ -1,22 +1,21 @@
 local utils = require("utils")
+
 local  move = true
 local finish = false
+
 function love.load()
   x = 1
   y = 100
-
 end
 
 function love.update(dt)
- 
- 
   if love.keyboard.isDown("d") and move then
     x = x + 250 * dt
   end
-    if x >= 600 then 
-    move = false
-    finish = true
-    end
+  if x >= 600 then 
+      move = false
+      finish = true
+  end
 end
 
 function love.draw()
@@ -34,13 +33,10 @@ function love.draw()
     love.graphics.print("END" ,710, 80)
     love.graphics.print("'D' To make this shit move" ,300,0)
     
-    if finish then
-      love.graphics.setColor(255,0,0,255)
-      love.graphics.print("SHIT DELIVERY", x+5, y+20)
-    end
-      
-    
-
+      if finish then
+        love.graphics.setColor(255,0,0,255)
+        love.graphics.print("SHIT DELIVERY", x+5, y+20)
+      end
 end
 
 
